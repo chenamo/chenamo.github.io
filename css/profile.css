@@ -1,0 +1,154 @@
+/*ダークテーマ時の変数*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: rgba(30, 30, 30, 0.8);
+        --font-color: rgb(65, 202, 127);
+        --hover-color: rgb(12, 236, 218);
+        --nav-bg-color: rgba(52, 58, 64, 1);
+        --invert-img-color: invert(100%);
+    }
+    #profile {
+        color:var(--font-color);
+    }
+}
+/*ライトテーマ時の変数*/
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg-color: rgba(190, 190, 190, 0.8);
+        --font-color: rgb(230, 225, 225);
+        --nav-bg-color: rgba(52, 58, 64, 1);
+        --invert-img-color: invert(0);
+    }
+    #profile {
+        color:white;
+    }
+}
+
+@font-face {
+    font-family: 'PublicSans-black';
+    src: url(../fonts/PublicSans-Black.ttf);
+}
+
+#profile {
+    background: rgba(76, 70, 131, 0.637);
+    height:100vh;
+    padding-top: 15vh;
+    font-family: PublicSans-black;
+}
+
+#hobby {
+    background: rgba(144, 64, 160, 0.637);
+    height:75rem;
+    padding-top: 15vh;
+    padding-bottom:30px;
+    color:rgba(150, 209, 41);
+    font-family: PublicSans-black;
+}
+
+.contact {
+    background: rgba(49, 139, 180, 0.637);
+    height:96vh;
+    padding-top: 15vh;
+    color:rgba(150, 209, 41);
+    margin:auto;
+    font-family: PublicSans-black;
+}
+
+.links {
+    padding-top: 150px;
+}
+
+.headline {
+    font-size: 5rem !important;
+}
+
+#outdoor {
+    margin-top:30px;
+    font-family: PublicSans-black;
+}
+
+.subtitle {
+    font-size: 4rem !important;
+    margin-top: -1em;
+}
+
+.sns {
+    color: gray;
+    filter:var(--invert-img-color);
+}
+
+.info {
+    font-size: 3rem;
+    padding-bottom:1em;
+}
+
+#profile img {
+    background-color:rgba(30, 30, 30, 0.0);
+}
+
+#pro1 {
+    animation: p1 2s ease 1000ms 1 both;
+}
+
+#contents {
+    height: 105vh !important;
+    font-family: PublicSans-black;
+}
+
+@keyframes p1 {
+    from {
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
+    to {
+        transform: scaleX(1);
+        transform-origin: left center;
+    }
+}
+@-webkit-keyframes p1 {
+    from {
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
+    to {
+        transform: scaleX(1);
+        transform-origin: left center;
+    }
+}
+
+#pro2 {
+    animation: p2 2s ease 3s 1 both;
+}
+
+@keyframes p2 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes p2 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#pro7 {
+    margin-left: 300px;
+}
+
+#discord-tag {
+    display:hide;
+}
+@supports (-ms-ime-align:auto) {
+    #profile {
+        background-color: rgba(76, 70, 131, 0.637);
+        color:rgb(58, 52, 52);
+    }
+
+}

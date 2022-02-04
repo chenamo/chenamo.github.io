@@ -1,0 +1,249 @@
+/*ダークテーマ時の変数*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: rgba(30, 30, 30, 0.8);
+        --font-color: rgb(65, 202, 127);
+        --hover-color: rgb(12, 236, 218);
+        --nav-bg-color: rgba(52, 58, 64, 1);
+        --invert-img-color: invert(100%);
+    }
+}
+/*ライトテーマ時の変数*/
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg-color: rgba(190, 190, 190, 0.8);
+        --font-color: rgb(230, 225, 225);
+        --hover-color: rgb(209, 79, 79);
+        --nav-bg-color: rgb(52, 58, 64, 1);
+        --invert-img-color: invert(0);
+    }
+}
+
+@font-face {
+    font-family: 'OraqleFont';
+    src: url('../fonts/Oraqle\ Script.ttf') format('truetype'), url('../fonts/Oraqle\ Script.woff') format('woff');
+}
+
+#edge-ks {
+    display:none;
+}
+
+html {
+    overflow:auto;
+}
+
+body {
+    background-attachment:fixed;
+    z-index:1;
+    overflow:hidden;
+    max-width:100vw;
+}
+
+body:before{
+    content:"";
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100vh;
+    background:url('../pics/waterfall.jpg') center no-repeat;
+    background-size:cover;
+  }
+
+.disabled {
+    color: gray !important;
+}
+
+.sns img {
+    filter:var(--invert-img-color);
+}
+
+/*ページ読み込み時のメインコンテンツ全体のアニメーション*/
+@keyframes fadeIn {
+    0% {opacity: 0};
+    100% {opacity: 1};
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0};
+    100% {opacity: 1};
+}
+/*ページ読み込み時のメインコンテンツ全体のスタイル*/
+#contents {
+    background: url('../pics/waterfall.jpg');
+    position:relative;
+    color: rgb(58, 52, 52);
+    background: rgba(190, 190, 190, 0.8);
+    color: var(--font-color);
+    background: var(--main-bg-color);
+    animation: fadeIn 2s ease-out 700ms 1 both;
+    -webkit-animation: fadeIn 1.8s ease 700ms 1 both;
+    z-index: 2;
+    padding-top:30vh;
+    padding-bottom:120px;
+    width:100%;
+}
+
+#form {
+    margin-top: 1%;
+}
+/*ページ読み込み時のヘッダーのアニメーション*/
+@keyframes slideIn {
+    from {
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
+    to {
+        transform: scaleX(1);
+        transform-origin: left center;
+    }
+}
+@-webkit-keyframes slideIn {
+    from {
+        transform: scaleX(0);
+        transform-origin: left center;
+    }
+    to {
+        transform: scaleX(1);
+        transform-origin: left center;
+    }
+}
+
+#header {
+    animation: slideIn 2s ease 300ms 1 both;
+    -webkit-animation: slideIn 2s ease 300ms 1 both;
+    position:fixed;
+    width:100%;
+    z-index: 3;
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+}
+
+.bg-header {
+    background:rgba(157, 162, 167, 0.9);
+    background: var(--nav-bg-color) !important;
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+    font-weight: bold;
+}
+
+#header a:link {
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+}
+
+#header a:visited {
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+}
+
+#header a:hover {
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+    animation: hover 500ms ease 0ms 1 both;
+    -webkit-animation: hover 500ms ease 0ms 1 both;
+}
+
+/*メニューの文字をホバーした際のアニメーション*/
+@keyframes hover {
+    from {
+        color:rgb(58, 52, 52);
+        color: var(--font-color);
+    }
+    to {
+        color: rgb(209, 79, 79);
+        color: var(--hover-color);
+    }
+}
+
+@-webkit-keyframes hover {
+    from {
+        color:rgb(58, 52, 52);
+        color: var(--font-color);
+    }
+    to {
+        color: rgb(209, 79, 79);
+        color: var(--hover-color);
+    } 
+}
+
+#header a:active {
+    color:var(--font-color);
+}
+
+#footer {
+    color:rgb(58, 52, 52);
+    color: var(--font-color);
+    background:rgb(75, 77, 78, 1);
+    background: var(--nav-bg-color);
+    height:4em;
+    /*animation: slideIn 2s ease 300ms 1 both;
+    -webkit-animation: slideIn 1s ease 300ms 1 both;*/
+    font-size: 14px !important;
+}
+
+#footer a:link {
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+}
+
+#footer a:visited {
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+}
+
+#footer a:hover {
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+}
+
+#footer a:active {
+    color:rgb(58, 52, 52);
+    color:var(--font-color);
+}
+
+@supports (-ms-ime-align:auto) {
+    body::after {
+        background:none !important;
+        background:transparent;
+    }
+    #header {
+        display:none;
+    }
+    #contents {
+        display:none;
+    }
+    #footer {
+        display:none;
+    }
+    #profile {
+        display:none;
+    }
+    #edge-ks {
+        display:inline !important;
+    }
+}
+
+@media all and (-ms-high-contrast: none) {
+    body::after {
+        background:none !important;
+        background: transparent;
+    }
+    #header {
+        display:none;
+    }
+    #contents {
+        display:none;
+    }
+    #footer {
+        display:none;
+    }
+    #profile {
+        display:none;
+    }
+    #edge-ks {
+        display:inline !important;
+    }
+  }
