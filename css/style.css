@@ -1,0 +1,51 @@
+body {
+    opacity: 1.0;
+}
+
+#header {
+    font-size: 2vmax;
+    text-align:right;
+}
+
+#header a {
+    color:black;
+}
+
+#header a:link {
+    color:black;
+}
+
+#header a:visited {
+    color:black;
+}
+
+#header a:hover {
+    color:rgb(23, 148, 106);
+}
+
+#header a:active {
+    color:rgb(38, 192, 115);
+}
+
+
+.main {
+    color:black;
+    padding-top:-10%;;
+    text-align:center;
+    font-size: 4vmin;
+}
+
+.main p {
+    color:black;
+    text-align:left;
+}
+
+.main h1 {
+    color:black;
+    text-align:center;
+}
+
+.main h2 {
+    color:black;
+    text-align:left;
+}
