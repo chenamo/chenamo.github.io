@@ -2,21 +2,36 @@ body {
     opacity: 1.0;
 }
 
+body a:link a:hover a:visited a:active {
+    color:black;
+}
+
+#site-name {
+    position:absolute;
+    left:10px;
+}
+
 #header {
+    color:white;
     font-size: 2vmax;
     text-align:right;
+    width:100vw;
+    height:3.2vw;
+    background-color:rgb(41, 49, 51);
+    position:fixed;
+    z-index:5;
 }
 
 #header a {
-    color:black;
+    margin-right:3vw;
 }
 
 #header a:link {
-    color:black;
+    color:white;
 }
 
 #header a:visited {
-    color:black;
+    color:white;
 }
 
 #header a:hover {
@@ -27,25 +42,253 @@ body {
     color:rgb(38, 192, 115);
 }
 
+.disabled:disabled {
+    pointer-events:painted;
+    color:gray;
 
-.main {
+}
+
+#toggler {
+    display:none;
+}
+
+#title {
+    background-image:url('../chez.png');
+    background-color:rgba(156, 146, 146, 0.541);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-position-y: 40vh;
+    height:100vh;
+    background-size:20%;
+}
+
+#title h1 {
+    color:black;
+    text-align:center;
+    font-size:10vmin;
+    padding-top:10%;
+}
+
+.scroll-down {
+    position:relative;
+    top:50%;
+    left:45%;
+    bottom:10px;
+    margin:0 auto;
+    fill:black;
+} 
+
+
+#picture-before-main {
+    position:relative;
+    height:90%;
+    background-image:url('../pics/picture-before-main.JPG');
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+
+#main {
+    color:black;
+    padding-top:10%;
+    height:100%;
+    padding-left:10vw;
+    padding-right:10vh;
+}
+
+#main, #links, #works {
+    color:black;
+    text-align:left;
+    font-size: 3.5vmin;
+}
+
+#works {
+    position:relative;
+    width:100%;
+    height:110%;
+    background-image:url('../works-bg.png');
+    background-color: rgb(0, 0, 0, 0.7);
+    background-blend-mode: color;
+}
+
+#works2 {
+    position:relative;
+    width:100%;
+    height:110%;
+    background-color: rgb(0, 0, 0);
+    background-blend-mode: color;
+}
+
+#works a:hover, a:link, a:visited, a:active {
+    color:black;
+}
+
+.works-box {
+    position:relative;
+    width:40%;
+    height:50%;
+    margin:auto;
+    background-color: rgb(214, 205, 205);
+    color:black;
+    border-radius:30px 30px 30px 30px;
+    text-align:center;
+    margin-top:5%;
+}
+
+.work-name {
+    font-size:3vmax;
+}
+
+.description {
+    display:relative;
+    top:5vh;
+}
+
+.read-more {
+    display:inline-block;
+    position:relative;
+    bottom:-30%;
+    width:auto;
+    height:auto;
+    color:white !important;
+    background-color:brown;
+    border-radius:15px 15px 15px 15px;
+}
+
+.preparing {
+    background-color:gray !important;
+    color:black;
+}
+
+.heading {
+    display:relative;
+    color:black;
+    text-align:left;
+    font-size: 10vmin;
+    left:20%;
+}
+
+.heading-works {
+    display:sticky;
+    color:white;
+    padding-top:5%;
+    padding-left:5%;
+}
+
+.border {
+    display:block;
+    width:60vw;
+    margin:0 auto;
+    border-color:rgb(59, 57, 57);
+    border-top: 3px solid gray;
+}
+
+/* .heading-links {
+    position:relative;
     color:black;
     padding-top:-10%;;
+    height:70vh;
+    padding-top:10vh;
+    padding-left:20vw;
+    padding-right:10vh;
+} */
+
+
+#links {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    color:black;
+    height:90%;
+    width:100%;
+}
+
+.heading-links {
     text-align:center;
-    font-size: 4vmin;
+    padding-top:10%;
+    width:100%;
 }
 
-.main p {
-    color:black;
-    text-align:left;
+#twitter {
+    fill:rgb(50, 144, 187);
 }
 
-.main h1 {
-    color:black;
+#discord {
+    fill:rgb(100, 57, 221);
+}
+
+#steam {
+    fill:rgb(37, 33, 44);
+}
+
+#footer {
+    height:8vh;
+    width:100%;
+    background-color:rgb(41, 49, 51);
+    color:white;
     text-align:center;
+    font-size:2vmin;
+    top:30%;
 }
 
-.main h2 {
-    color:black;
-    text-align:left;
+#footer p {
+    display: inline;
+    vertical-align:middle;
+}
+
+@media screen and (max-width:480px) {
+    #title {
+        background-image:url('../chez.png');
+        background-color:rgba(156, 146, 146, 0.541);
+        background-repeat:no-repeat;
+        background-position:center;
+        background-position-y: 40vh;
+        height:100vh;
+        background-size:50%;
+    }
+    .scroll-down {
+        position:relative;
+        display:flex;
+        flex-direction: row;
+        top:70%;
+        bottom:10px;
+        fill:black;
+    }
+    #header {
+        font-size:2.3vmax !important;
+        height:4vh;
+        display:none;
+    }
+    #toggler {
+        display:flex !important;
+        position:absolute;
+        width:100%;
+        height:30%;
+        background-color: azure;;
+    }
+    #picture-before-main {
+        background-image:url('../pics/picture-before-main.JPG');
+        background-position-y:center;
+        background-color:black;
+        height:50vh;
+
+    }
+    h1 {
+        position:relative;
+        top:10%;
+    }
+    #main, #links {
+        font-size:23px;
+    }
+    #header {
+        font-size:5vmin;
+        width:100vw;
+    }
+    .heading {
+        font-size:44px;
+    }
+    #main {
+        padding-left:5vw;
+        padding-right:5vw;
+    }
 }
