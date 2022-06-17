@@ -15,7 +15,7 @@
     </head>
     <script>
          $(function() {
-         $("#header").load("../header.html");
+         $("#header").load("header.html");
         });
         </script>
         <script>
@@ -31,45 +31,43 @@
             let href= $(this).attr("href");
             let target = $(href == "#" || href == "" ? 'html' : href);
             let position = target.offset().top;
+            var speed = 500;
             $("html, body").animate({scrollTop:position}, speed, "swing");
             return false;
         });
 });
         </script>
-    <body oncontextmenu="alert('Right Click is prohibited!');return false">
+
+        </script>
+    <body oncontextmenu="alert('右クリックは禁止だよ！＼(^o^)／');return false">
         <div id="header">
         </div>
         <!-- タイトル -->
         <div id="title">
-            <h1>Chezel's Room</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" width="10%" height="10%" fill="currentColor" class="bi bi-chevron-double-down scroll-down" viewBox="0 0 16 16">
-                <a xlink:href="#main">
-                    <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                    <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                </a>
-            </svg>
+            <h1>Chezelの部屋</h1>
         </div>
         <!-- 写真 -->
-        <div id="picture-before-main"></div>
         <!-- 自己紹介 -->
         <div id="main">
-            <p class="heading">Who am I?</p>
-            <p>ちぇず(Chezel)</p><p>2002/05/28，Born in Japan.<br>I like urban photography, and I follow the trend of urban development on Twitter.<br>ピサヤ(Pisaya)<a href="https://twitter.com/pisaya_street">@pisaya_street</a>is a Twitter account that provides information about the Nagoya area.</p>In addition, I like to play PC game, cycling, and taking photos.<br>If you are interested in playing games, please contact me on Twitter or Discord.</p>
+            <p class="heading">私は誰ですか？</p>
+            <p>ちぇず(Chezel)</p><p>H14/05/28，日本生まれ。<br>都市写真が好きで、Twitter上で名古屋圏を中心に都市開発の動向を追う。<br>ピサヤ(Pisaya)<a href="https://twitter.com/pisaya_street">@pisaya_street</a>というアカウント上で名古屋圏の情報発信中。</p>その他、現在はPCゲームを中心に軽く自転車や写真撮影にも挑戦中。<br>ゲーム等のお誘いは下記TwitterかDiscordまで</p>
         </div>
         <hr class="border">
         <!-- Works -->
         <div id="works">
             <p class="heading heading-works">Works</p>
             <div class="works-box">
-                <div class="work-name">City Redevelopment Community</div>
-                <div class="work-description">Let's communicate with city<br />redevelopment lovers each other!<br />Click the below button to join!</div>
-                <a class="read-more" href="../en/citycommu">Join Us</a>
+                <div class="work-name">Minecraft建築サーバー</div>
+                <div class="work-description">招待制のサーバーを運営しています<br>Edition:Java<br>Ver:1.18.1</div>
+                <a class="read-more preparing">現在準備中</a>
             </div>
-            <div class="works-box">
-                <div class="work-name">Discord Server</div>
-                <div class="work-description">Discord server of mine, by me, for me.</div>
-                <a class="read-more" href="../en/discord/">Join Us</a>
-            </div>
+            <div id="works">
+                <p class="heading heading-works"></p>
+                <div class="works-box">
+                    <div class="work-name">Discord Server</div>
+                    <div class="work-description">私による私のための<br />私のDiscordサーバーです。</div>
+                    <a class="read-more preparing" href="../discord">参加する</a>
+                </div>
         </div>
         <hr class="border">
         <!-- リンク集 -->

@@ -31,7 +31,6 @@
             let href= $(this).attr("href");
             let target = $(href == "#" || href == "" ? 'html' : href);
             let position = target.offset().top;
-            var speed = 500;
             $("html, body").animate({scrollTop:position}, speed, "swing");
             return false;
         });
@@ -47,20 +46,24 @@
             <h1>Chezelの部屋</h1>
         </div>
         <!-- 写真 -->
-        <div id="picture-before-main"></div>
         <!-- 自己紹介 -->
         <div id="main">
             <p class="heading">私は誰ですか？</p>
             <p>ちぇず(Chezel)</p><p>H14/05/28，日本生まれ。<br>都市写真が好きで、Twitter上で名古屋圏を中心に都市開発の動向を追う。<br>ピサヤ(Pisaya)<a href="https://twitter.com/pisaya_street">@pisaya_street</a>というアカウント上で名古屋圏の情報発信中。</p>その他、現在はPCゲームを中心に軽く自転車や写真撮影にも挑戦中。<br>ゲーム等のお誘いは下記TwitterかDiscordまで</p>
         </div>
         <hr class="border">
-        <!-- Works -->
+        <!-- Work Box -->
         <div id="works">
             <p class="heading heading-works">Works</p>
             <div class="works-box">
-                <div class="work-name">Minecraft建築サーバー</div>
-                <div class="work-description">招待制のサーバーを運営しています<br>Edition:Java<br>Ver:1.18.1</div>
-                <a class="read-more preparing">現在準備中</a>
+                <div class="work-name">地理・都市開発こみゅ</div>
+                <div class="work-description">地理や都市開発に関する情報を<br />共有するためのコミュニティです。<br>活動場所はDiscord（予定）です。<br />詳細は下記リンクから！</div>
+                <a class="read-more" href="../citycommu">参加する</a>
+            </div>
+            <div class="works-box">
+                <div class="work-name">ちぇさば</div>
+                <div class="work-description">私による私のための<br />私のDiscordサーバーです。</div>
+                <a class="read-more" href="../discord/">参加する</a>
             </div>
         </div>
         <hr class="border">

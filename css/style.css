@@ -1,5 +1,6 @@
 body {
     opacity: 1.0;
+    width:100%;
 }
 
 body a:link a:hover a:visited a:active {
@@ -11,7 +12,7 @@ body a:link a:hover a:visited a:active {
     left:10px;
 }
 
-#header {
+.head {
     color:white;
     font-size: 2vmax;
     text-align:right;
@@ -48,8 +49,107 @@ body a:link a:hover a:visited a:active {
 
 }
 
-#toggler {
+#menu-sp {
     display:none;
+}
+
+.menu {
+    width: 70%;
+    height: 100vh;
+    margin-left: auto;
+    /* メニューを縦に */
+    display:block;
+    flex-direction: column;
+    color: #efefef;
+    background-color: rgba(167, 148, 58, 0.7);
+    transition: .3s;
+  }
+
+.menu {
+    /* メニューの位置マイナス指定で画面外に */
+    position: fixed;
+    right: -70%;
+    width: 70%;
+    height: 100vh;
+    /* メニューを縦に */
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+    background-color: rgba(73, 73, 70, 0.705);
+    transition: .3s;
+  }
+
+.menu-list {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    /* メニューテキスト位置をリスト内中心に */
+    display:block; 
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    /* ボタンの配置位置  */
+    position:fixed;
+    top: 32px;
+    right: 16px;
+    /* ボタンの大きさ  */
+    width: 48px;
+    height: 48px;
+    /* 最前面に */
+    z-index: 100;
+    background-color:rgb(112, 106, 106)
+}
+
+.btn-line {
+	display: block;
+	position: relative;  /* バーガー線の位置基準として設定 */
+	width: 100%;  /* 線の長さと高さ */
+	height: 4px;
+	background-color: #d6d5d5;  /* バーガー線の色 */
+	transition: .2s;
+}
+
+/****** 上下のバーガー線 *****/
+.btn-line::before,
+.btn-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d6d5d5;
+  transition: .5s;
+}
+.btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-16px);
+}
+.btn-line::after {
+  /* 下の線の位置 */
+  transform: translateY(16px);
+}
+
+.menu.open {
+    display:flex;
+    right: 0;
+  }
+
+  /***** メニューオープン時 *****/
+.btn-line.open {
+	background-color: transparent;  	/* 真ん中の線を透明に */
+}
+.btn-line.open::before ,
+.btn-line.open::after {
+	content: "";
+	background-color: #333;  /* 上下の線の色を変える */
+	transition: .2s;
+}
+.btn-line.open::before {
+	transform: rotate(45deg);  /* 上の線を傾ける */
+}
+.btn-line.open::after {
+	transform: rotate(-45deg);  /* 下の線を傾ける */
 }
 
 #title {
@@ -104,10 +204,13 @@ body a:link a:hover a:visited a:active {
 #works {
     position:relative;
     width:100%;
-    height:110%;
+    height:auto;
     background-image:url('../works-bg.png');
     background-color: rgb(0, 0, 0, 0.7);
     background-blend-mode: color;
+    z-index:1;
+    margin:auto;
+    padding-bottom:10%;
 }
 
 #works2 {
@@ -124,8 +227,8 @@ body a:link a:hover a:visited a:active {
 
 .works-box {
     position:relative;
-    width:40%;
-    height:50%;
+    width:50%;
+    height:auto;
     margin:auto;
     background-color: rgb(214, 205, 205);
     color:black;
@@ -135,7 +238,10 @@ body a:link a:hover a:visited a:active {
 }
 
 .work-name {
-    font-size:3vmax;
+    padding-top:5%;
+    margin-bottom:10%;
+    font-size:3.5vmax;
+    font-weight:700;
 }
 
 .description {
@@ -146,7 +252,10 @@ body a:link a:hover a:visited a:active {
 .read-more {
     display:inline-block;
     position:relative;
-    bottom:-30%;
+    margin-top:10%;
+    margin-bottom:15%;
+    padding-left:3%;
+    padding-right:3%;
     width:auto;
     height:auto;
     color:white !important;
@@ -237,6 +346,7 @@ body a:link a:hover a:visited a:active {
 }
 
 @media screen and (max-width:480px) {
+
     #title {
         background-image:url('../chez.png');
         background-color:rgba(156, 146, 146, 0.541);
@@ -254,17 +364,25 @@ body a:link a:hover a:visited a:active {
         bottom:10px;
         fill:black;
     }
-    #header {
-        font-size:2.3vmax !important;
-        height:4vh;
+    .head {
         display:none;
+        font-size:2.3vmax !important;
+        height:auto;
+        word-wrap:break-word;
     }
-    #toggler {
+    #menu-sp {
+        position:fixed;
+        display:contents
+    }
+    .menu {
+        z-index:6;
         display:flex !important;
-        position:absolute;
-        width:100%;
-        height:30%;
-        background-color: azure;;
+        position:fixed;
+        z-index:11;
+    }
+    #menu-list {
+        top:-10%;
+        bottom:-10%;
     }
     #picture-before-main {
         background-image:url('../pics/picture-before-main.JPG');
@@ -279,6 +397,7 @@ body a:link a:hover a:visited a:active {
     }
     #main, #links {
         font-size:23px;
+        height:auto;
     }
     #header {
         font-size:5vmin;
@@ -290,5 +409,17 @@ body a:link a:hover a:visited a:active {
     #main {
         padding-left:5vw;
         padding-right:5vw;
+    }
+    #works {
+        height:auto;
+    }
+    .works-box {
+        width:80%;
+        height:auto;
+        margin:auto;
+        margin-top:10%;
+    }
+    #links {
+        height:100%;
     }
 }
