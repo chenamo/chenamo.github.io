@@ -204,7 +204,7 @@ body a:link a:hover a:visited a:active {
 #works {
     position:relative;
     width:100%;
-    height:auto;
+    height:100%;
     background-image:url('../works-bg.png');
     background-color: rgb(0, 0, 0, 0.7);
     background-blend-mode: color;
@@ -259,6 +259,7 @@ body a:link a:hover a:visited a:active {
     width:auto;
     height:auto;
     color:white !important;
+    vertical-align:middle;
     background-color:brown;
     border-radius:15px 15px 15px 15px;
 }
@@ -354,7 +355,8 @@ body a:link a:hover a:visited a:active {
         background-position:center;
         background-position-y: 40vh;
         height:100vh;
-        background-size:50%;
+        background-size:70%;
+        font-size: 2.3vmax;
     }
     .scroll-down {
         position:relative;
@@ -397,9 +399,13 @@ body a:link a:hover a:visited a:active {
     }
     #main, #links {
         font-size:23px;
-        height:auto;
+        height:100%;
     }
     #header {
+        font-size:5vmin;
+        width:100vw;
+    }
+    #footer {
         font-size:5vmin;
         width:100vw;
     }
@@ -411,15 +417,23 @@ body a:link a:hover a:visited a:active {
         padding-right:5vw;
     }
     #works {
-        height:auto;
+        height:100vh;
     }
     .works-box {
         width:80%;
-        height:auto;
+        height:60%;
         margin:auto;
         margin-top:10%;
     }
+    .read-more {
+        margin-top: 40%;
+        width:50%;
+        height:10%;
+        padding-left:3%;
+        padding-right:3%;
+    }
     #links {
         height:100%;
+        padding-top:10%;
     }
 }
