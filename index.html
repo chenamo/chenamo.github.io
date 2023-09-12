@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         @font-face {
             font-family: marukiya;
             src: url('./marukiya.ttf') format("truetype");
         }
+        @keyframes fadein {
+            from {
+                margin-top: 105vh;
+            }
+            to {
+                margin-top: 0vh;
+            }
+        } 
         body {
             margin-left: 1.1em;
             margin-right: 2em;
@@ -28,6 +37,7 @@
             margin-bottom: -0.5em;
             line-height: 0.8em;
             margin-bottom: 2em;
+            animation: fadein 1.2s steps(20, end);
         }
         #dialogue_box h3 {
             text-decoration: underline;
