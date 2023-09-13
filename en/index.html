@@ -40,6 +40,7 @@
         @media screen and (max-width:480px) {
             body {
                 font-size: 16px;
+
             }
             .box {
                 animation: flash 1s linear infinite;
@@ -55,24 +56,24 @@
             overflow: hidden;
         }
         a:link {
-            text-decoration: underline; /* 下線を追加 */
-            color: rgb(94, 255, 0); /* リンクのテキストカラー */
+            text-decoration: underline; 
+            color: rgb(94, 255, 0); 
         }
         a:visited {
-            text-decoration: underline; /* 下線を追加 */
-            color: rgb(94, 255, 0); /* リンクのテキストカラー */
+            text-decoration: underline; 
+            color: rgb(94, 255, 0); 
         }
         a:focus {
-            text-decoration: underline; /* 下線を追加 */
-            color: rgb(255, 255, 255); /* リンクのテキストカラー */
+            text-decoration: underline; 
+            color: rgb(255, 255, 255); 
         }
         a:hover {
-            text-decoration: underline; /* 下線を追加 */
-            color: rgb(255, 255, 255); /* リンクのテキストカラー */
+            text-decoration: underline; 
+            color: rgb(255, 255, 255); 
         }
         a:active {
-            text-decoration: underline; /* 下線を追加 */
-            color: rgb(254, 255, 254); /* リンクのテキストカラー */
+            text-decoration: underline; 
+            color: rgb(254, 255, 254); 
         }
         .box {
 	    animation: flash 1s linear infinite;
@@ -83,8 +84,8 @@
         margin-top: 0.9em;
         }
         .horizontal-line {
-            width: 100%; /* ハイフンを横いっぱいに広げる */
-            height: 1em; /* 高さを調整することでハイフンの大きさを変えられます */
+            width: 100%;
+            height: 1em;
             background: repeating-linear-gradient(0deg, transparent, transparent 9px, rgb(94, 255, 0) 9px, rgb(94, 255, 0) 10px);
             background-size: 10px 1em;
         }
@@ -93,8 +94,8 @@
     <script>
     // 時刻表示
         function showtime(){
-        var datetime = new Date();//取得
-        $("#nowtime").html(datetime);//表示
+        var datetime = new Date();
+        $("#nowtime").html(datetime);
     }
     setInterval(showtime, 1000)
     </script>
@@ -102,13 +103,13 @@
   <body>
     <div id="address-bar">
     <p>
-        <div style="display: flex;">Last loaded: <div id="nowtime"></div></div>
+        <div style="display: flex;"> <div id="nowtime"></div></div>
         ~/Guest$ >>> open https://chez.jp/<br><br>
         <div class="horizontal-line"></div>
         <div><p style="text-align:center;">← → | ↻ | https://chez.jp/ | </p>
         <div class="horizontal-line"></div>
     </div>
-        <h2 id="about">>>> About Me<<< </h2>
+        <h2 id="about">>>> About Me <<< </h2>
             <p id="about_">
 
             >>> Live in: Japan<br>
@@ -124,7 +125,7 @@
             </p>
         <div style="display:flex;"><p>~/Guest$ >>> set-locale LANG=ja_JP </p><div class="box"></div></div>
     </p>
-    <a href="../"><h3 style="text-align:center; margin-top: 1.5em;">タップで日本語用サイトへ飛びます</h3>
+    <a href="../"><h3 style="text-align:center; margin-top: 1.5em;">日本語用サイトはこちら</h3>
 </script>
 </body>
 </html>
