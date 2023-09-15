@@ -5,8 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="/chez.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/t.js"></script>
     <style>
-        html {
+        html a:any-link {
+            color: #551b8c;
+        }
+        html a:active {
+            color: white;
+        }
+        html a:hover {
+            color: white;
         }
         @font-face {
             font-family: marukiya;
@@ -39,15 +48,15 @@
         }
         body {
             font-family: 'marukiya';
-            font-size: 1.8vw;
+            font-size: 24px;
             font-weight: normal;
             color:white;
             background-color: black;
         }
         #dialogue_box {
             margin-left: 1.1em;
-            margin-right: 2em;
-            height:19.4em;
+            margin-right: 1.1em;
+            height:20em;
             border: double;
             border-width:16px;
             border-color:antiquewhite;
@@ -62,12 +71,12 @@
             text-decoration: underline;
         }
         h1 {
-            margin-top: 2%;
+            margin-top: 0.2em;
         }
         .jump {
-            animation: jump-button 1.5s infinite;
-            margin-top: 1em;
+            margin-top: 6px;
             text-align:center;
+            animation: jump-button 1.5s infinite;
         }
         #credit {
             padding-left:auto;
@@ -79,6 +88,9 @@
         
 
         @media screen and (max-width:480px) {
+            h1 {
+                padding-top: 6px;
+            }
             body {
                 font-size:5.6vw;
                 margin:none;
@@ -109,7 +121,7 @@
             <p>・いんすたぐらむ > <a href="https://instagram.com/chezelgram">chezelgram</a></p>
             <p>・みすきーどっとあいおー > <a href="https://misskey.io/@chezel">@chezel</a></p>
             <p>・でぃすこーどさーばー > <a href="https://discord.gg/MX4WvhCJWs"><br class="sp">ちぇさば</a></p>
-        <a href="./en" class="jump"><h3>JUMP TO ENGLISH PAGE</h3></a>
+        <a href="./en"><h3 class="jump">JUMP TO ENGLISH PAGE</h3></a>
     </div>
 </body>
 </html>
