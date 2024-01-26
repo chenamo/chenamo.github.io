@@ -1,48 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#1355D7">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0591">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0AA809">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="/chez.png">
+    <link rel="icon" href="../chez.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/t.js"></script>
+    <script src="./t.js"></script>
     <style>
-        html a:any-link {
-            color: rgb(110, 30, 189);
-        }
-        html a:active {
-            color: white;
-        }
-        html a:hover {
-            color: white;
-        }
-        h1 a:any-link {
-            color: white;
-        }
         @font-face {
-            font-family: marukiya;
-            src: url('./marukiya.ttf') format("truetype");
+            font-family: misaki-mincho;
+            src: url('./misaki_mincho.ttf') format("truetype");
         }
-        @keyframes fadein {
+        @keyframes typing {
             from {
-                margin-top: 100%;
+                width: 0;
             }
             to {
-                margin-top: 0%;
+                width: 100%;
             }
-        }
-        @keyframes allow-overflow {
-            from {
-                overflow-y: hidden;
-            }
-            to {
-                overflow-y: auto;
-            }
-        }
-        @keyframes jump-button {
+        } 
+        @keyframes flash {
 	        0%,
 	        100% {
 	            opacity: 1;
@@ -52,83 +32,102 @@
 	      }
         }
         body {
-            font-family: 'marukiya';
-            font-size: 24px;
+            font-size: 20px;
             font-weight: normal;
-            color:white;
+            color:rgb(94, 255, 0);
             background-color: black;
+            line-height: 1.2em;
+            border-right: 1px solid black;
+            animation: typing 1.5s steps(20, end);
         }
-        #dialogue_box {
-            margin-left: 1.1em;
-            margin-right: 1.1em;
-            height:20em;
-            border: double;
-            border-width:16px;
-            border-color:antiquewhite;
-            border-radius: 24px;
-            padding-top:0.5em;
-            padding-left:0.6em;
-            padding-right:0.6em;
-            margin-bottom: 2em;
-            line-height: 0.8em;
-            animation: fadein 1.2s steps(20, end);
-        }
-        #dialogue_box h3 {
-            text-decoration: underline;
-        }
-        h1 {
-            margin-top: 0.2em;
-        }
-        .jump {
-            margin-top: 6px;
-            text-align:center;
-            animation: jump-button 1.5s infinite;
-        }
-        #credit {
-            display:flex;
-            justify-content: center;
-            margin-top: -2em;
-        }
-        .sp {
-                display:none;
-            }
-        
-
         @media screen and (max-width:480px) {
-            h1 {
-                padding-top: 6px;
-            }
             body {
-                font-size:5.6vw;
-                margin:none;
-                line-height: 2em;
+                font-size: 16px;
+
             }
-            #dialogue_box {
-                line-height: 0.85em;
-                height:100%;
+            .box {
+                animation: flash 1s linear infinite;
+	            width: 7px;
+	            height: 20px;
+	            background:rgb(94, 255, 0);
+	            margin-left: 0.4em;
+                margin-top: 16px;
             }
-            .sp {
-                display:block;
-            }
+        }
+        .horizontal-line {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        a:link {
+            text-decoration: underline; 
+            color: rgb(94, 255, 0); 
+        }
+        a:visited {
+            text-decoration: underline; 
+            color: rgb(94, 255, 0); 
+        }
+        a:focus {
+            text-decoration: underline; 
+            color: rgb(255, 255, 255); 
+        }
+        a:hover {
+            text-decoration: underline; 
+            color: rgb(255, 255, 255); 
+        }
+        a:active {
+            text-decoration: underline; 
+            color: rgb(254, 255, 254); 
+        }
+        .box {
+	    animation: flash 1s linear infinite;
+	    width: 7px;
+	    height: 1.2em;
+	    background:rgb(94, 255, 0);
+	    margin-left: 0.1em;
+        margin-top: 0.9em;
+        }
+        .horizontal-line {
+            width: 100%;
+            height: 1em;
+            background: repeating-linear-gradient(0deg, transparent, transparent 9px, rgb(94, 255, 0) 9px, rgb(94, 255, 0) 10px);
+            background-size: 10px 1em;
         }
     </style>
-    <title>chez.jp
-    
-    </title>
+    <title>chez.jp</title>
+    <script>
+    // 時刻表示
+    function showtime(){
+        var datetime = new Date();
+        $("#nowtime").html(datetime);
+    }
+    setInterval(showtime, 100)
+    </script>
   </head>
   <body>
-    <h1 style="text-align: center">Chez.jp</h1>
-    <div id="dialogue_box">
-        <h3>じこしょうかい</h2>
-            <p>・すみ > にっぽん</p>
-            <p>・みぶん > がくせい</p>
-            <p>・きょうみ > りょこう、<br class="sp">ガジェット、しゃしん、まちづくり、など...</p>
-        <h3>りんくしゅう</h2>
-            <p>・えっくす(ついったー) > きゅうしちゅう</a></p>
-            <p>・いんすたぐらむ > <a href="https://instagram.com/chezelgram">chezelgram</a></p>
-            <p>・でぃすこーどさーばー > <a href="https://discord.gg/MX4WvhCJWs"><br class="sp">ちぇさば</a></p>
-        <a href="./en"><h3 class="jump">READ IN ENGLISH</h3></a>
+    <div id="address-bar">
+    <p>
+        <div style="display: flex;"> <div id="nowtime"></div></div>
+        Copyright 2023-2024 Chezel<br>~/Guest$ >>> open https://chez.jp/<br><br>
+        <div class="horizontal-line"></div>
+        <div><p style="text-align:center;">← → | ↻ | https://chez.jp/ | </p>
+        <div class="horizontal-line"></div>
     </div>
-    <a id="credit">COPYRIGHT 2023 Chezel</a>
+        <h2 id="about">>>> About Me <<< </h2>
+            <p id="about_">
+
+            >>> Live in: 日本<br>
+            >>> Role: 学生<br>
+            >>> Hobby: 旅行、写真、ドライブ
+            </p>
+        <h2 id="links">>>> Links <<<</h2>
+            <p id="links_">
+            >>> 𝕏(Twitter): <a href="https://twitter.com/chezniki">chezniki</a><br>
+            >>> Misskey.io: <a href="https://misskey.io/@chezel">@chezel</a><br>
+            >>> Discord Server: <a href="https://discord.gg/MX4WvhCJWs">chesaba</a></p>
+            </p>
+        <div style="display:flex;"><p>~/Guest$ >>> set-locale LANG=en_US </p><div class="box"></div></div>
+    </p>
+    <a href="../en"><h3 style="text-align:center; margin-top: 1.5em;">英語で表示</h3>
+</script>
 </body>
 </html>
