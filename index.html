@@ -10,10 +10,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./t.js"></script>
     <style>
-        @font-face {
+        /* @font-face {
             font-family: misaki-mincho;
             src: url('./misaki_mincho.ttf') format("truetype");
-        }
+        } */
         @keyframes typing {
             from {
                 width: 0;
@@ -84,7 +84,7 @@
 	    height: 1.2em;
 	    background:rgb(94, 255, 0);
 	    margin-left: 0.1em;
-        margin-top: 0.9em;
+        margin-top: 2.1em;
         }
         .horizontal-line {
             width: 100%;
@@ -105,28 +105,47 @@
   </head>
   <body>
     <div id="address-bar">
-    <p>
-        <div style="display: flex;"> <div id="nowtime"></div></div>
-        Copyright 2023-2024 Chezel<br>~/Guest$ >>> open https://chez.jp/<br><br>
+    <p> 
+        <!-- 特に意味ないので一旦削除 <div style="display: flex;"> <div id="nowtime"></div></div> -->
+        ~/Guest$ >>> open https://chez.jp/<br>
         <div class="horizontal-line"></div>
-        <div><p style="text-align:center;">← → | <a href="./">↻</a> | https://chez.jp/ | </p>
+        <div><p style="text-align:center;">← → | <a href="./">↻</a> | 🔒 https://chez.jp/ | </p>
         <div class="horizontal-line"></div>
     </div>
-        <h2 id="about">>>> About Me <<< </h2>
+        <h2 id="about">>>> Specs <<< </h2>
             <p id="about_">
 
-            >>> Live in: Japan<br>
-            >>> Role: Student<br>
-            >>> Hobby: journey/photograph/driving
+            >>> Live in: Japan<br />
+            >>> Gender: Male<br />
+            >>> Role: College Student B3 (Faculty of International Studies)<br />
+            </p>
+        </div>
+        <h2 id="likes">>>> About Me <<< </h2>
+            <p id="likes_">
+            複数人でわいわいやれるようなパーティーゲームやボードゲーム
+            などが好きで、その他はたまにRPGなどを少々やる程度です。
+            ソシャゲ類などのスマホゲーは全くやっていません。<br />
+            ゲームの他には旅行や、風景写真なども趣味にしています。
+            消極的で寡黙な性格ですが、人と話すことは好きなので、
+            リプ/DM/通話 お誘い大歓迎なので誘って頂ければ喜びます。<br />
+            語学は狭く浅くで、ﾁｮｯﾄﾜｶﾙ程度で全く読み書き出来ません。
+            学んだことある言語は<br />
+            英語/フランス語/インドネシア語/ウクライナ語/アイヌ語/ です。<br />
+            </p>
+        <h2 id="dislikes">>>> Dislikes <<< </h2>
+            <p id="dislikes_">
+            基本的にエロい話やグロい話などはあまり得意ではないので、
+            自発的に話題を振ることはありませんが、聞くのみであれば
+            耐性はある方だと思います。
             </p>
         <h2 id="links">>>> Links <<<</h2>
             <p id="links_">
-            >>> 𝕏(Twitter): <a href="https://twitter.com/chezniki">chezniki</a><br>
-            >>> Fediverse: <a href="https://misskey.io/@chezel">@chezel@misskey.io</a><br>
-            >>> Discord Friend: <a href="https://discord.com/invite/ZAgEfsty">Chezel</a><br>
-            >>> Discord Server: <a href="https://discord.gg/MX4WvhCJWs">chesaba</a></p>
+                >>> 𝕏(Twitter): <a href="https://twitter.com/chezniki">chezniki</a><br>
+                >>> Fediverse: <a href="https://misskey.io/@chezel">@chezel@misskey.io</a><br>
+                >>> Discord Friend: <a href="https://discord.com/invite/ZAgEfsty">Chezel</a><br>
+                >>> Discord Server: <a href="https://discord.gg/MX4WvhCJWs">chesaba</a></p>
             </p>
-        <div style="display:flex;"><p>~/Guest$ >>> exit </p><div class="box"></div></div>
+        <div style="display:flex;"><p>~/Guest$ >>> lastupdated --date 20240226<br />~/Guest$ >>> copyright -f 2024 -o "chez.jp" </p><div class="box"></div></div>
     </p>
 
 </script>
